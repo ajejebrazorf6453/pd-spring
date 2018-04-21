@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mockMessageService" class="hello2.MockMessageService" />
+	<bean id="confMessageService" class="hello2.ConfigurableMessageService">
+		<property name="message" value="test test test" />
+	</bean>
+	
+	<alias name="confMessageService" alias="messageService"/>
+	<bean id="messagePrinter" class="hello.MessagePrinter">
+		<constructor-arg name="service" ref="messageService"/>
+	</bean>
+
+    <bean class="hello2.InstantiationTracingBeanPostProcessor"/>
+
+</beans>
