@@ -4,3 +4,6 @@ ajejebrazorf6453
 https://github.com/ajejebrazorf6453/pd-spring.git
 
 https://github.com/PacktPublishing/Spring-5.0-By-Example.git
+
+
+https://github.com/mkyong/spring-embedded-database.git
