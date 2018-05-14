@@ -7,7 +7,7 @@ import hello.MessagePrinter;
 import hello.MessageService;
 
 @Configuration
-@ComponentScan
+@ComponentScan("hello")
 public class Application {
 
     @Bean
